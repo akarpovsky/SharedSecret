@@ -1,0 +1,30 @@
+package "shasec"
+
+version "0.1"
+
+description "Shasec is an implementation of a shared secret system proposed in \"Improvements in Geometry-Based Secret Image Sharing Approach with Steganography\" by Mustafa Ulutas, Vasif V. Nabiyev and Guzin Ulutas."
+
+defgroup "actions" required
+groupoption "distribute" d "Distributes the secret" group="actions"
+groupoption "recovery" r "Recovers the secret" group="actions"
+
+option "secret" - "Image path of a .bmp image" 
+details="If the action is a distribution, the image represents the secret. However, if the action is a recovery, the image is the path where the output will be placed"
+string typestr="filename"
+
+option "keys" k "Number of keys to recover the secret"
+int typestr="number"
+values="2","3","4"
+
+option "number" n "Total number of shadows where the secret will be distributed"
+dependon="distribute"
+int typestr="number"
+values="3","4","5","6","7","8"
+optional
+
+option "dir" - "Directory where the images will be placed"
+details="If the action is a distribution, the shadow images will be placed in this directory. However, if the action is 
+a recovery, the image shadows will be taken from this directory"
+string typestr="pathname"
+default="./"
+optional
