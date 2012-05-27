@@ -7,10 +7,10 @@ LDIR=lib
 
 LIBS=-lm
 
-_DEPS= types.h cmdline.h
+_DEPS= cmdline.h imageLoader.h messages.h
 DEPS=$(patsubst %, $(IDIR)/%,$(_DEPS))
 
-_OBJ= main.o cmdline.o
+_OBJ= main.o cmdline.o imageLoader.o
 OBJ=$(patsubst %, $(ODIR)/%,$(_OBJ))
 
 $(ODIR)/%.o: %.c $(DEPS)
