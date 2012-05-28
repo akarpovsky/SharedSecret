@@ -20,8 +20,15 @@ main(int argc, char **argv)
 			printf("Width: %d\n", im->width);
 			printf("Height: %d\n", im->height);
 			printf("Size: %d\n", im->image_size);
+			if(save_bmp_image(im) == 0){
+				printf("Guardó bien");
+			}else{
+				printf("Error guardando");
+				return EXIT_FAILURE;
+			}
 		}else{
 			printf("error!\n");
+			return EXIT_FAILURE;
 		}
 	}
 
