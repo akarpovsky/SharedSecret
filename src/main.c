@@ -8,26 +8,26 @@ int
 main(int argc, char **argv)
 {
 
-	struct gengetopt_args_info args_info;
+	struct gengetopt_args_info *args_info = malloc(sizeof(struct gengetopt_args_info));
 
-	if(cmdline_parser(argc, argv, &args_info) != 0) {
+	if(cmdline_parser(argc, argv, args_info) != 0) {
 		return EXIT_FAILURE;
 	}
 
-	BmpImage im = create_bmp_image("images/bmps300x300/cualquiera");
+	if(args_info->secret_given) {
+		BmpImage im = create_bmp_image(args_info->secret_arg);
+		if(load_bmp_image(im) == 0) {
+			printf("Width: %d\n", im->width);
+			printf("Height: %d\n", im->height);
+			printf("Size: %d\n", im->image_size);
+		}else{
+			printf("error!\n");
+		}
+	}
 
-	load_bmp_image(im);
 
-	printf("Width: %d\n", im->width);
-	printf("Height: %d\n", im->height);
+
+	free(args_info);
 
 	return EXIT_SUCCESS;
-}
-
-bool
-checkFiles(struct gengetopt_args_info * args_info)
-{
-	if(args_info->number_given) {
-
-	}
 }

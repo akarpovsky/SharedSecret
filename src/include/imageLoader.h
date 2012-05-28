@@ -10,8 +10,9 @@ struct bmp_image {
 	int width;
 	int height;
 	short pixel_bits;
-	int compression_method;
 	int image_size;
+
+	int header_size;
 
 	void *header;
 	void *bitmap;
@@ -22,6 +23,8 @@ typedef struct bmp_image * BmpImage;
 BmpImage create_bmp_image(char * filename);
 
 int load_bmp_image(BmpImage image);
+
+int save_bmp_image(BmpImage im);
 
 void free_bmp_image(struct bmp_image* im);
 
