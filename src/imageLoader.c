@@ -15,7 +15,7 @@ int
 load_bmp_image(BmpImage im)
 {
 	FILE *fp;
-	int header_size;
+	int array_offset;
 	
 	fp = fopen(im->filename, "rb");
 
@@ -23,12 +23,11 @@ load_bmp_image(BmpImage im)
 		THROW_FILE_ERROR;
 	}
 
-
-	fseek(fp, 0x0E, SEEK_SET);
-	FCHK(fread(&header_size, sizeof(header_size), 1, fp));
+	fseek(fp, 10, SEEK_SET);
+	FCHK(fread(&array_offset, 4, 1, fp));
 
 	/*Se copia el header entero para guardarlo como estaba*/
-	im->header_size = 0x0E + header_size;
+	im->header_size = array_offset;
 	im->header = malloc(im->header_size);
 	fseek(fp, 0x00, SEEK_SET);
 	FCHK(fread(im->header, im->header_size, 1, fp));
@@ -54,10 +53,12 @@ load_bmp_image(BmpImage im)
 }
 
 int
-save_bmp_image(BmpImage im) {
+save_bmp_image(BmpImage im) 
+{
 	FILE *fp;
 	fp = fopen(im->filename, "wb");
 
+	fseek(fp, 0x00, SEEK_SET);
 	FCHK(fwrite(im->header, im->header_size, 1, fp));
 	FCHK(fwrite(im->bitmap, im->image_size, 1, fp));
 

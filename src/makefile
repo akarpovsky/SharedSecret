@@ -7,17 +7,17 @@ LDIR=lib
 
 LIBS=-lm
 
-_DEPS= cmdline.h imageLoader.h messages.h
+_DEPS= cmdline.h imageLoader.h messages.h distribution.h
 DEPS=$(patsubst %, $(IDIR)/%,$(_DEPS))
 
-_OBJ= main.o cmdline.o imageLoader.o
+_OBJ= main.o cmdline.o imageLoader.o distribution.o
 OBJ=$(patsubst %, $(ODIR)/%,$(_OBJ))
 
 $(ODIR)/%.o: %.c $(DEPS)
 			$(CC) -c -o $@ $< $(CFLAGS)
 
 shasec: $(OBJ)
-	$(CC) -o $@ $^ $(CFLAGS) $(CFLAGS) 
+	$(CC) -o $@ $^ $(CFLAGS) $(LIBS) 
 
 %.o: %.c $(DEPS) $(CC) -c -o $@ $< $(LIBS)
 

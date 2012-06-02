@@ -14,8 +14,8 @@ struct bmp_image {
 
 	int header_size;
 
-	void *header;
-	void *bitmap;
+	char *header;
+	char *bitmap;
 };
 
 typedef struct bmp_image * BmpImage;

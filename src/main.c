@@ -4,6 +4,8 @@
 #include "include/messages.h"
 #include "include/cmdline.h"
 #include "include/imageLoader.h"
+#include "include/distribution.h"
+
 int
 main(int argc, char **argv)
 {
@@ -15,21 +17,33 @@ main(int argc, char **argv)
 	}
 
 	if(args_info->secret_given) {
-		BmpImage im = create_bmp_image(args_info->secret_arg);
-		if(load_bmp_image(im) == 0) {
-			printf("Width: %d\n", im->width);
-			printf("Height: %d\n", im->height);
-			printf("Size: %d\n", im->image_size);
-			if(save_bmp_image(im) == 0){
-				printf("Guardó bien");
-			}else{
-				printf("Error guardando");
-				return EXIT_FAILURE;
-			}
-		}else{
-			printf("error!\n");
-			return EXIT_FAILURE;
-		}
+		/*BmpImage secret = create_bmp_image(args_info->secret_arg);*/
+		BmpImage secret = create_bmp_image("images/secrets/Gustavo.bmp");
+		load_bmp_image(secret);
+		
+		BmpImage c1 = create_bmp_image("images/sub1/Alfred.bmp");
+		BmpImage c2 = create_bmp_image("images/sub1/Eva.bmp");
+		BmpImage c3 = create_bmp_image("images/sub1/Audrey.bmp");
+		BmpImage c4 = create_bmp_image("images/sub1/Albert.bmp");
+		load_bmp_image(c1);
+		load_bmp_image(c2);
+		load_bmp_image(c3);
+		load_bmp_image(c4);
+
+		BmpImage p[] = {c1,c2,c3, c4};
+		distribution(secret, p, 3, 4);
+
+		save_bmp_image(c1);
+		save_bmp_image(c2);
+		save_bmp_image(c3);
+		save_bmp_image(c4);
+
+		free_bmp_image(secret);
+		free_bmp_image(c1);
+		free_bmp_image(c2);
+		free_bmp_image(c3);
+		free_bmp_image(c4);
+
 	}
 
 
