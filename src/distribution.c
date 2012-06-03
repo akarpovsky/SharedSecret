@@ -14,22 +14,29 @@ distribution(BmpImage secret, BmpImage * cover, int k, int n)
 
 	int maxblocks = secret->image_size/k;
 	
-	printf("Maxblocks: %d\n", maxblocks);
-
 	char * secretBlock;
 
-	int bl,c,B;
+	int bl,c,B,i;
 
 	unsigned char * a;
+
+	unsigned char ** matrix = createMatrix(k, n);
 
 	for(bl = 0; bl < maxblocks; bl++) {
 		secretBlock = getBlock(secret, bl, k);
 		for(c = 0; c < n; c++) {
 			a = getAvalues(cover[c], bl, k);
 			B = evaluate(secretBlock, a, k);
+			for(i = 0; i < k; i++) {
+				matrix[c][i] = a[i];
+			}
+			matrix[c][k] = (unsigned char) B;
+			solve(matrix, k, n);
 			setBInBlock(cover[c], bl, k, B);
 		}
 	}
+
+	freeMatrix(matrix, n);
 
 	return 0;
 }
@@ -51,7 +58,7 @@ getAvalues(BmpImage im, int b, int k)
 	int aux;
 	for(i = 0; i < k; i++) {
 		/* Se saca tmb el lugar donde se pone p */
-		aux = pow(2, i != k ? Bbits[i] : Bbits[i] + 1);
+		aux = pow(2, i != k - 1 ? Bbits[i] : Bbits[i] + 1);
 		ret[i] = ((block[i] & (256 - aux)) / aux);
 	}
 

@@ -23,25 +23,21 @@ main(int argc, char **argv)
 		
 		BmpImage c1 = create_bmp_image("images/sub1/Alfred.bmp");
 		BmpImage c2 = create_bmp_image("images/sub1/Eva.bmp");
-		BmpImage c3 = create_bmp_image("images/sub1/Audrey.bmp");
 		BmpImage c4 = create_bmp_image("images/sub1/Albert.bmp");
 		load_bmp_image(c1);
 		load_bmp_image(c2);
-		load_bmp_image(c3);
 		load_bmp_image(c4);
 
-		BmpImage p[] = {c1,c2,c3, c4};
-		distribution(secret, p, 3, 4);
+		BmpImage p[] = {c1, c2, c4};
+		distribution(secret, p, 3, 3);
 
 		save_bmp_image(c1);
 		save_bmp_image(c2);
-		save_bmp_image(c3);
 		save_bmp_image(c4);
 
 		free_bmp_image(secret);
 		free_bmp_image(c1);
 		free_bmp_image(c2);
-		free_bmp_image(c3);
 		free_bmp_image(c4);
 
 	}

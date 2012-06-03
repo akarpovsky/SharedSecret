@@ -2,6 +2,7 @@
 #define DISTRIBUTION_H
 
 #include "imageLoader.h"
+#include "gauss.h"
 #include <math.h>
 
 #define PRIME 251
