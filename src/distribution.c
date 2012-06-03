@@ -1,8 +1,7 @@
 #include "include/distribution.h"
 
 char * getBlock(BmpImage im, int block, int k);
-/*char * getCoeffAndCleanBlock(BmpImage im, int block, int k);*/
-unsigned char evaluate(char * secretBlock, char * a, int k);
+unsigned char evaluate(unsigned char * secretBlock, unsigned char * a, int k); 
 void setBInBlock(BmpImage im, int b, int k,  unsigned char B);
 
 unsigned char * getAvalues(BmpImage im, int block, int k);
@@ -14,13 +13,14 @@ distribution(BmpImage secret, BmpImage * cover, int k, int n)
 
 	int maxblocks = secret->image_size/k;
 	
-	char * secretBlock;
+	unsigned char * secretBlock;
 
 	int bl,c,B,i;
 
 	unsigned char * a;
 
 	unsigned char ** matrix = createMatrix(k, n);
+	unsigned char * solution = malloc(k * sizeof(unsigned char));
 
 	for(bl = 0; bl < maxblocks; bl++) {
 		secretBlock = getBlock(secret, bl, k);
@@ -31,9 +31,11 @@ distribution(BmpImage secret, BmpImage * cover, int k, int n)
 				matrix[c][i] = a[i];
 			}
 			matrix[c][k] = (unsigned char) B;
-			solve(matrix, k, n);
 			setBInBlock(cover[c], bl, k, B);
 		}
+		printf("Secret: ");
+		printSolution(secretBlock, k);
+		solve(matrix, k, n, solution);
 	}
 
 	freeMatrix(matrix, n);
@@ -119,7 +121,7 @@ setBInBlock(BmpImage im, int b, int k,  unsigned char B) {
 }
 
 unsigned char
-evaluate(char * secretBlock, char * a, int k) {
+evaluate(unsigned char * secretBlock, unsigned char * a, int k) {
 	int i;
 	int aux = 0;
 	for(i = 0; i < k; i++) {
