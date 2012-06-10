@@ -44,6 +44,7 @@ const char *gengetopt_args_info_detailed_help[] = {
   "  -n, --number=number    Total number of shadows where the secret will be \n                           distributed  (possible values=\"3\", \"4\", \"5\", \n                           \"6\", \"7\", \"8\")",
   "      --dir=pathname     Directory where the images will be placed  \n                           (default=`./')",
   "  If the action is a distribution, the shadow images will be placed in this \n  directory. However, if the action is \n  a recovery, the image shadows will be taken from this directory",
+  "      --verbose          Verbose",
     0
 };
 
@@ -60,11 +61,12 @@ init_help_array(void)
   gengetopt_args_info_help[7] = gengetopt_args_info_detailed_help[8];
   gengetopt_args_info_help[8] = gengetopt_args_info_detailed_help[9];
   gengetopt_args_info_help[9] = gengetopt_args_info_detailed_help[10];
-  gengetopt_args_info_help[10] = 0; 
+  gengetopt_args_info_help[10] = gengetopt_args_info_detailed_help[12];
+  gengetopt_args_info_help[11] = 0; 
   
 }
 
-const char *gengetopt_args_info_help[11];
+const char *gengetopt_args_info_help[12];
 
 typedef enum {ARG_NO
   , ARG_STRING
@@ -101,6 +103,7 @@ void clear_given (struct gengetopt_args_info *args_info)
   args_info->keys_given = 0 ;
   args_info->number_given = 0 ;
   args_info->dir_given = 0 ;
+  args_info->verbose_given = 0 ;
   args_info->actions_group_counter = 0 ;
 }
 
@@ -131,6 +134,7 @@ void init_args_info(struct gengetopt_args_info *args_info)
   args_info->keys_help = gengetopt_args_info_detailed_help[8] ;
   args_info->number_help = gengetopt_args_info_detailed_help[9] ;
   args_info->dir_help = gengetopt_args_info_detailed_help[10] ;
+  args_info->verbose_help = gengetopt_args_info_detailed_help[12] ;
   
 }
 
@@ -315,6 +319,8 @@ cmdline_parser_dump(FILE *outfile, struct gengetopt_args_info *args_info)
     write_into_file(outfile, "number", args_info->number_orig, cmdline_parser_number_values);
   if (args_info->dir_given)
     write_into_file(outfile, "dir", args_info->dir_orig, 0);
+  if (args_info->verbose_given)
+    write_into_file(outfile, "verbose", 0, 0 );
   
 
   i = EXIT_SUCCESS;
@@ -452,6 +458,12 @@ cmdline_parser_required2 (struct gengetopt_args_info *args_info, const char *pro
   if (! args_info->keys_given)
     {
       fprintf (stderr, "%s: '--keys' ('-k') option required%s\n", prog_name, (additional_error ? additional_error : ""));
+      error = 1;
+    }
+  
+  if (! args_info->verbose_given)
+    {
+      fprintf (stderr, "%s: '--verbose' option required%s\n", prog_name, (additional_error ? additional_error : ""));
       error = 1;
     }
   
@@ -642,6 +654,7 @@ cmdline_parser_internal (
         { "keys",	1, NULL, 'k' },
         { "number",	1, NULL, 'n' },
         { "dir",	1, NULL, 0 },
+        { "verbose",	0, NULL, 0 },
         { 0,  0, 0, 0 }
       };
 
@@ -747,6 +760,20 @@ cmdline_parser_internal (
                 &(local_args_info.dir_given), optarg, 0, "./", ARG_STRING,
                 check_ambiguity, override, 0, 0,
                 "dir", '-',
+                additional_error))
+              goto failure;
+          
+          }
+          /* Verbose.  */
+          else if (strcmp (long_options[option_index].name, "verbose") == 0)
+          {
+          
+          
+            if (update_arg( 0 , 
+                 0 , &(args_info->verbose_given),
+                &(local_args_info.verbose_given), optarg, 0, 0, ARG_NO,
+                check_ambiguity, override, 0, 0,
+                "verbose", '-',
                 additional_error))
               goto failure;
           

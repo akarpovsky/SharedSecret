@@ -54,6 +54,7 @@ struct gengetopt_args_info
   char * dir_arg;	/**< @brief Directory where the images will be placed (default='./').  */
   char * dir_orig;	/**< @brief Directory where the images will be placed original value given at command line.  */
   const char *dir_help; /**< @brief Directory where the images will be placed help description.  */
+  const char *verbose_help; /**< @brief Verbose help description.  */
   
   unsigned int help_given ;	/**< @brief Whether help was given.  */
   unsigned int detailed_help_given ;	/**< @brief Whether detailed-help was given.  */
@@ -64,6 +65,7 @@ struct gengetopt_args_info
   unsigned int keys_given ;	/**< @brief Whether keys was given.  */
   unsigned int number_given ;	/**< @brief Whether number was given.  */
   unsigned int dir_given ;	/**< @brief Whether dir was given.  */
+  unsigned int verbose_given ;	/**< @brief Whether verbose was given.  */
 
   int actions_group_counter; /**< @brief Counter for group actions */
 } ;

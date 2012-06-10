@@ -9,7 +9,7 @@ void switchRows(unsigned char **matrix, int k, int row1, int row2);
 unsigned char ** 
 createMatrix(int k, int n)
 {
-	unsigned char **matrix = malloc(n * sizeof(unsigned char));
+	unsigned char **matrix = malloc(n * sizeof(unsigned char *));
 	int i;
 	for(i = 0; i < n; i++) {
 		matrix[i] = malloc((k + 1) * sizeof(unsigned char));
@@ -37,8 +37,8 @@ solve(unsigned char **matrix, int k, int n, unsigned char * solution) {
 	}
 
 	int i, j, num;
-	for(i = 0; i < n; i++) {
-		if(matrix[i][i] != 1 ) {
+	for(i = 0; i < k; i++) {
+		if(matrix[i][i] != 1) {
 			num = modmap[matrix[i][i] - 1];
 			mulRow(matrix, k, i, num);
 		}
@@ -56,24 +56,19 @@ solve(unsigned char **matrix, int k, int n, unsigned char * solution) {
 		solution[i] = matrix[i][k];
 	}
 
-	printf("Solution: ");
-	printSolution(solution, k);
-	printf("\n\n");
-
 	free(modmap);
 
 	return true;
 
 }
 
-void
-printSolution(unsigned char * solution, int k)
+int 
+scd(unsigned char **matrix, int k, int n)
 {
-	int i;
-	for(i = 0; i < k; i++) {
-		printf(" %d ", solution[i]);
-	}
-	printf("\n");
+	unsigned char *solution = malloc(k * sizeof(unsigned char));
+	int ret = solve(matrix, k, n, solution);
+	free(solution);
+	return ret;
 }
 
 void
@@ -126,14 +121,17 @@ mulRow(unsigned char **matrix, int k, int row, int num)
 int
 reacomodateMatrix(unsigned char **matrix, int k, int n)
 {
+
 	int i,j, switchpos;
 	for(i = 0; i < k; i++) {
 		if(matrix[i][i] == 0) {
 			switchpos = -1;
-			for(j = i + 1; i < n; i++) {
-				if(matrix[i][n] != 0) {
-					switchpos = j;
-					break;
+			if(i + 1 != n) {
+				for(j = i + 1; i < n; i++) {
+					if(matrix[i][n] != 0) {
+						switchpos = j;
+						break;
+					}
 				}
 			}
 			if(switchpos == -1) {
@@ -150,7 +148,7 @@ switchRows(unsigned char **matrix, int k, int row1, int row2)
 {
 	int i;
 	unsigned char aux;
-	for(i = 0; i < k+1; i++) {
+	for(i = 0; i <= k; i++) {
 		aux = matrix[row1][i];
 		matrix[row1][i] = matrix[row2][i];
 		matrix[row2][i] = aux;

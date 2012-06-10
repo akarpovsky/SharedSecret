@@ -3,6 +3,8 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
 #include "messages.h"
 
 struct bmp_image {
@@ -14,8 +16,8 @@ struct bmp_image {
 
 	int header_size;
 
-	char *header;
-	char *bitmap;
+	unsigned char *header;
+	unsigned char *bitmap;
 };
 
 typedef struct bmp_image * BmpImage;
@@ -28,5 +30,8 @@ int save_bmp_image(BmpImage im);
 
 void free_bmp_image(struct bmp_image* im);
 
+BmpImage duplicate(BmpImage im, char * filename);
+
+void print_bmp_image(BmpImage im);
 
 #endif

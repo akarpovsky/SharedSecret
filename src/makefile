@@ -5,7 +5,7 @@ CFLAGS=-I$(IDIR)
 ODIR=obj
 LDIR=lib
 
-LIBS=-lm
+LIBS=-lm -lcrypto
 
 _DEPS= cmdline.h imageLoader.h messages.h distribution.h gauss.h utils.h
 DEPS=$(patsubst %, $(IDIR)/%,$(_DEPS))

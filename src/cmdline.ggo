@@ -28,3 +28,5 @@ a recovery, the image shadows will be taken from this directory"
 string typestr="pathname"
 default="./"
 optional
+
+option "verbose" - "Verbose"

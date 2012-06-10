@@ -9,3 +9,13 @@ mod(int x, int y)
 		return x % y;
 	}
 }
+
+void
+printBlock(unsigned char * block, int k)
+{
+	int i;
+	for(i = 0; i < k; i++) {
+		printf(" %d ", block[i]);
+	}
+	printf("\n");
+}
