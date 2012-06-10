@@ -384,7 +384,19 @@ recover(BmpImage recover, BmpImage * cover, int k, int n, int verbose)
 	unsigned char ** matrix = createMatrix(k, n);
 	unsigned char * solution = malloc(k * sizeof(unsigned char));
 
+	if(verbose) {
+		printf("0");
+		for(i = 2; i < 78; i++) {
+			printf(" ");
+		}
+		printf("100\n");
+	}
+
 	for(bl = 0; bl < maxblocks; bl++) {
+		if(verbose && (bl % (maxblocks / 80)) == 0) {
+			printf(".");
+			fflush(stdout);
+		}
 		for(c = 0; c < n; c++) {
 			if(!checkHashBit(cover[c], bl, k)) {
 				bitErr++;
@@ -409,6 +421,10 @@ recover(BmpImage recover, BmpImage * cover, int k, int n, int verbose)
 			gaussErr++;
 			ret = false;
 		}
+	}
+
+	if(verbose) {
+		printf("\n");
 	}
 
 	if(bitErr > 0) {

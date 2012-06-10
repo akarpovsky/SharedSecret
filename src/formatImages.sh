@@ -1,3 +1,3 @@
-for f in $(find -type f $1 | grep .bmp); do
+for f in $(find $1 -type f | grep .bmp); do
 	java -jar chformat.jar $f $f
 done

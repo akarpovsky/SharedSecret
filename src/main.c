@@ -1,6 +1,8 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
 #include <dirent.h>
+#include <string.h>
 
 #include "include/messages.h"
 #include "include/cmdline.h"

@@ -461,12 +461,6 @@ cmdline_parser_required2 (struct gengetopt_args_info *args_info, const char *pro
       error = 1;
     }
   
-  if (! args_info->verbose_given)
-    {
-      fprintf (stderr, "%s: '--verbose' option required%s\n", prog_name, (additional_error ? additional_error : ""));
-      error = 1;
-    }
-  
   if (args_info->actions_group_counter == 0)
     {
       fprintf (stderr, "%s: %d options of group actions were given. One is required%s.\n", prog_name, args_info->actions_group_counter, (additional_error ? additional_error : ""));
