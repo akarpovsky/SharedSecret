@@ -1,4 +1,20 @@
 \BOOKMARK [1][-]{section.1}{Introducci\363n}{}
 \BOOKMARK [1][-]{section.2}{Desarrollo}{}
-\BOOKMARK [2][-]{subsection.2.1}{Sistemas compatibles determinados}{section.2}
-\BOOKMARK [2][-]{subsection.2.2}{Validaci\363n de la distribuci\363n}{section.2}
+\BOOKMARK [2][-]{subsection.2.1}{Algoritmo de distribuci\363n}{section.2}
+\BOOKMARK [3][-]{subsubsection.2.1.1}{Sistemas compatibles determinados}{subsection.2.1}
+\BOOKMARK [3][-]{subsubsection.2.1.2}{Validaci\363n de la distribuci\363n}{subsection.2.1}
+\BOOKMARK [2][-]{subsection.2.2}{Algoritmo de reconstrucci\363n}{section.2}
+\BOOKMARK [3][-]{subsubsection.2.2.1}{M\351todo de soluci\363n de sistemas de ecuaciones en aritm\351tica modular}{subsection.2.2}
+\BOOKMARK [2][-]{subsection.2.3}{Comparaci\363n con el algoritmo original de Shamir}{section.2}
+\BOOKMARK [1][-]{section.3}{Lectura del Paper}{}
+\BOOKMARK [1][-]{section.4}{Posibles extensiones}{}
+\BOOKMARK [2][-]{subsection.4.1}{Im\341genes en color}{section.4}
+\BOOKMARK [2][-]{subsection.4.2}{Selecci\363n de los bloques}{section.4}
+\BOOKMARK [1][-]{section.5}{Posibles aplicaciones}{}
+\BOOKMARK [2][-]{subsection.5.1}{Env\355o de im\341genes sensibles a trav\351s de redes no confiables}{section.5}
+\BOOKMARK [2][-]{subsection.5.2}{Persistencia de im\341genes en filesystem p\372blico}{section.5}
+\BOOKMARK [1][-]{section.6}{Resultados}{}
+\BOOKMARK [2][-]{subsection.6.1}{2 sombras}{section.6}
+\BOOKMARK [2][-]{subsection.6.2}{3 sombras}{section.6}
+\BOOKMARK [2][-]{subsection.6.3}{4 sombras}{section.6}
+\BOOKMARK [1][-]{appendix.A}{Figuras}{}

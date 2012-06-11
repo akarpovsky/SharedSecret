@@ -1,0 +1,21 @@
+\select@language {spanish}
+\contentsline {section}{\numberline {1}Introducci\IeC {\'o}n}{2}{section.1}
+\contentsline {section}{\numberline {2}Desarrollo}{2}{section.2}
+\contentsline {subsection}{\numberline {2.1}Algoritmo de distribuci\IeC {\'o}n}{2}{subsection.2.1}
+\contentsline {subsubsection}{\numberline {2.1.1}Sistemas compatibles determinados}{3}{subsubsection.2.1.1}
+\contentsline {subsubsection}{\numberline {2.1.2}Validaci\IeC {\'o}n de la distribuci\IeC {\'o}n}{3}{subsubsection.2.1.2}
+\contentsline {subsection}{\numberline {2.2}Algoritmo de reconstrucci\IeC {\'o}n}{3}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}M\IeC {\'e}todo de soluci\IeC {\'o}n de sistemas de ecuaciones en aritm\IeC {\'e}tica modular}{4}{subsubsection.2.2.1}
+\contentsline {subsection}{\numberline {2.3}Comparaci\IeC {\'o}n con el algoritmo original de Shamir}{4}{subsection.2.3}
+\contentsline {section}{\numberline {3}Lectura del \emph {Paper}}{4}{section.3}
+\contentsline {section}{\numberline {4}Posibles extensiones}{5}{section.4}
+\contentsline {subsection}{\numberline {4.1}Im\IeC {\'a}genes en color}{5}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Selecci\IeC {\'o}n de los bloques}{5}{subsection.4.2}
+\contentsline {section}{\numberline {5}Posibles aplicaciones}{5}{section.5}
+\contentsline {subsection}{\numberline {5.1}Env\IeC {\'\i }o de im\IeC {\'a}genes sensibles a trav\IeC {\'e}s de redes no confiables}{5}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Persistencia de im\IeC {\'a}genes en filesystem p\IeC {\'u}blico}{5}{subsection.5.2}
+\contentsline {section}{\numberline {6}Resultados}{5}{section.6}
+\contentsline {subsection}{\numberline {6.1}2 sombras}{5}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}3 sombras}{6}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}4 sombras}{6}{subsection.6.3}
+\contentsline {section}{\numberline {A}Figuras}{7}{appendix.A}

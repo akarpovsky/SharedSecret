@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.4)  11 JUN 2012 04:02
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.4)  11 JUN 2012 15:16
 entering extended mode
  %&-line parsing enabled.
 **informe.tex
@@ -527,73 +527,93 @@ File: hpdftex.def 2009/10/09 v6.79a Hyperref driver for pdfTeX
 (/usr/share/texmf-texlive/tex/latex/multirow/multirow.sty
 \bigstrutjot=\dimen119
 )
+(/usr/share/texmf-texlive/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip46
+\subfigcapskip=\skip47
+\subfigcaptopadj=\dimen120
+\subfigbottomskip=\skip48
+\subfigcapmargin=\dimen121
+\subfiglabelskip=\skip49
+\c@subfigure=\count117
+\c@lofdepth=\count118
+\c@subtable=\count119
+\c@lotdepth=\count120
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/share/texmf-texlive/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip50
+\subfig@bottom=\skip51
+)
 (/usr/share/texmf-texlive/tex/latex/anysize/anysize.sty
 Package: anysize 1994/08/13 setting margin sizes
 
 document style option `anysize' loaded
 Michael Salzenberg, Thomas Esser, Dirk Hillbrecht
 Version 1.0, Aug 13, 1994
-\@Leftmargin=\dimen120
-\@Rightmargin=\dimen121
-\@Topmargin=\dimen122
-\@Bottommargin=\dimen123
+\@Leftmargin=\dimen122
+\@Rightmargin=\dimen123
+\@Topmargin=\dimen124
+\@Bottommargin=\dimen125
 ) (./informe.aux)
 \openout1 = `informe.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
  (/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count117
-\scratchdimen=\dimen124
+\scratchcounter=\count121
+\scratchdimen=\dimen126
 \scratchbox=\box33
-\nofMPsegments=\count118
-\nofMParguments=\count119
+\nofMPsegments=\count122
+\nofMParguments=\count123
 \everyMPshowfont=\toks32
-\MPscratchCnt=\count120
-\MPscratchDim=\dimen125
-\MPnumerator=\count121
+\MPscratchCnt=\count124
+\MPscratchDim=\dimen127
+\MPnumerator=\count125
 \everyMPtoPDFconversion=\toks33
 )
-Package hyperref Info: Link coloring OFF on input line 25.
+Package hyperref Info: Link coloring OFF on input line 26.
  (/usr/share/texmf-texlive/tex/latex/hyperref/nameref.sty
 Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
 
 (/usr/share/texmf-texlive/tex/latex/oberdiek/refcount.sty
 Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 )
-\c@section@level=\count122
+\c@section@level=\count126
 )
-LaTeX Info: Redefining \ref on input line 25.
-LaTeX Info: Redefining \pageref on input line 25.
+LaTeX Info: Redefining \ref on input line 26.
+LaTeX Info: Redefining \pageref on input line 26.
  (./informe.out)
 (./informe.out)
 \@outlinefile=\write6
 \openout6 = `informe.out'.
 
 \AtBeginShipoutBox=\box34
- <Imagenes/logo_itba.png, id=19, 534.99875pt x 189.70876pt>
+ <Imagenes/logo_itba.png, id=83, 534.99875pt x 189.70876pt>
 File: Imagenes/logo_itba.png Graphic file (type png)
 
 <use Imagenes/logo_itba.png>
-LaTeX Font Info:    Try loading font information for U+msa on input line 39.
+LaTeX Font Info:    Try loading font information for U+msa on input line 40.
 
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 39.
+LaTeX Font Info:    Try loading font information for U+msb on input line 40.
 
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
@@ -601,42 +621,190 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Imagenes/logo_itba.png (
 PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 75--78
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 79--81
-
- []
+(./informe.toc)
+\tf@toc=\write7
+\openout7 = `informe.toc'.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.95 \end{document}
-                    [1] (./informe.aux) ) 
+l.66 \clearpage
+                [1]
+Underfull \hbox (badness 10000) in paragraph at lines 79--82
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 83--85
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--98
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 135--138
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--149
+
+ []
+
+[2
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 172--175
+
+ []
+
+
+Package amsmath Warning: Foreign command \atopwithdelims;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 176.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--177
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 178--182
+
+ []
+
+[3]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 281.
+
+ (/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 281.
+ [4] [5] [6]
+<./3sombras/Jim3.png, id=178, 451.6875pt x 301.125pt>
+File: ./3sombras/Jim3.png Graphic file (type png)
+
+<use ./3sombras/Jim3.png>
+<./3sombras/Roberto3.png, id=179, 451.6875pt x 301.125pt>
+File: ./3sombras/Roberto3.png Graphic file (type png)
+
+<use ./3sombras/Roberto3.png>
+<./3sombras/Whitney3.png, id=180, 451.6875pt x 301.125pt>
+File: ./3sombras/Whitney3.png Graphic file (type png)
+
+<use ./3sombras/Whitney3.png>
+<./3sombras/Shakira3.png, id=181, 451.6875pt x 301.125pt>
+File: ./3sombras/Shakira3.png Graphic file (type png)
+
+<use ./3sombras/Shakira3.png>
+<./3sombras/resultado.png, id=182, 451.6875pt x 301.125pt>
+File: ./3sombras/resultado.png Graphic file (type png)
+
+<use ./3sombras/resultado.png>
+Underfull \hbox (badness 10000) in paragraph at lines 366--379
+[][] [][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 366--379
+[][] [][]
+ []
+
+<./2sombras/Carlitos2.png, id=183, 301.125pt x 451.6875pt>
+File: ./2sombras/Carlitos2.png Graphic file (type png)
+
+<use ./2sombras/Carlitos2.png>
+<./2sombras/Gandhi2.png, id=184, 301.125pt x 451.6875pt>
+File: ./2sombras/Gandhi2.png Graphic file (type png)
+
+<use ./2sombras/Gandhi2.png>
+<./2sombras/James2.png, id=185, 301.125pt x 451.6875pt>
+File: ./2sombras/James2.png Graphic file (type png)
+
+<use ./2sombras/James2.png>
+<./2sombras/resultado.png, id=186, 301.125pt x 451.6875pt>
+File: ./2sombras/resultado.png Graphic file (type png)
+
+<use ./2sombras/resultado.png>
+Underfull \hbox (badness 10000) in paragraph at lines 386--396
+[][] [][] [][]
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<./4sombras/James4.png, id=187, 301.125pt x 301.125pt>
+File: ./4sombras/James4.png Graphic file (type png)
+
+<use ./4sombras/James4.png>
+<./4sombras/Eva4.png, id=188, 301.125pt x 301.125pt>
+File: ./4sombras/Eva4.png Graphic file (type png)
+ <use ./4sombras/Eva4.png>
+<./4sombras/Albert4.png, id=189, 301.125pt x 301.125pt>
+File: ./4sombras/Albert4.png Graphic file (type png)
+
+<use ./4sombras/Albert4.png>
+<./4sombras/Gustavo4.png, id=190, 301.125pt x 301.125pt>
+File: ./4sombras/Gustavo4.png Graphic file (type png)
+
+<use ./4sombras/Gustavo4.png>
+<./4sombras/Marilyn4.png, id=191, 301.125pt x 301.125pt>
+File: ./4sombras/Marilyn4.png Graphic file (type png)
+
+<use ./4sombras/Marilyn4.png>
+<./4sombras/resultado.png, id=192, 301.125pt x 301.125pt>
+File: ./4sombras/resultado.png Graphic file (type png)
+
+<use ./4sombras/resultado.png>
+Underfull \hbox (badness 10000) in paragraph at lines 403--419
+[][] [][] [][]
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[7
+
+ <./3sombras/Jim3.png (PNG copy)> <./3sombras/Roberto3.png (PNG copy)> <./3somb
+ras/Whitney3.png (PNG copy)> <./3sombras/Shakira3.png (PNG copy)> <./3sombras/r
+esultado.png (PNG copy)>] [8 <./2sombras/Carlitos2.png (PNG copy)> <./2sombras/
+Gandhi2.png (PNG copy)> <./2sombras/James2.png (PNG copy)> <./2sombras/resultad
+o.png (PNG copy)>] [9 <./4sombras/James4.png (PNG copy)> <./4sombras/Eva4.png (
+PNG copy)> <./4sombras/Albert4.png (PNG copy)> <./4sombras/Gustavo4.png (PNG co
+py)> <./4sombras/Marilyn4.png (PNG copy)> <./4sombras/resultado.png (PNG copy)>
+] (./informe.aux) ) 
 Here is how much of TeX's memory you used:
- 6521 strings out of 495061
- 89626 string characters out of 1182622
- 167067 words of memory out of 3000000
- 9565 multiletter control sequences out of 15000+50000
- 13720 words of font info for 52 fonts, out of 3000000 for 9000
+ 6867 strings out of 495061
+ 95012 string characters out of 1182622
+ 182559 words of memory out of 3000000
+ 9826 multiletter control sequences out of 15000+50000
+ 16641 words of font info for 62 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 38i,7n,36p,273b,324s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texmf-texlive/fonts/type1/
-public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsf
-onts/cm/cmbx9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx
-ti10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><
-/usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/t
-exmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-texlive
-/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type1
-/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfo
-nts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy
-9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on informe.pdf (2 pages, 178901 bytes).
+ 38i,8n,36p,273b,449s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmb
+x10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></u
+sr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/tex
+mf-texlive/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-texliv
+e/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-texlive/fonts/ty
+pe1/public/amsfonts/cmextra/cmex9.pfb></usr/share/texmf-texlive/fonts/type1/pub
+lic/amsfonts/cm/cmmi6.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts
+/cm/cmmi8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi9.pf
+b></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/shar
+e/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texl
+ive/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-texlive/fonts/typ
+e1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/public/ams
+fonts/cm/cmr9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy
+10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr
+/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texmf
+-texlive/fonts/type1/public/amsfonts/cm/cmti9.pfb>
+Output written on informe.pdf (10 pages, 1690825 bytes).
 PDF statistics:
- 76 PDF objects out of 1000 (max. 8388607)
- 6 named destinations out of 1000 (max. 500000)
- 38 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 291 PDF objects out of 1000 (max. 8388607)
+ 57 named destinations out of 1000 (max. 500000)
+ 241 words of extra memory for PDF output out of 10000 (max. 10000000)
 
