@@ -7,7 +7,9 @@ BmpImage
 create_bmp_image(char * filename)
 {
 	BmpImage ret = malloc(sizeof(struct bmp_image));
-	ret->filename = filename;
+	ret->filename = malloc(strlen(filename) + 1);
+	strcpy(ret->filename, filename);
+
 	return ret;
 }
 
@@ -78,7 +80,7 @@ free_bmp_image(struct bmp_image* im)
 
 BmpImage 
 duplicate(BmpImage im, char * filename) {
-	BmpImage ret = malloc(sizeof(BmpImage));
+	BmpImage ret = malloc(sizeof(struct bmp_image));
 
 	ret->filename = filename;
 	ret->width = im->width;

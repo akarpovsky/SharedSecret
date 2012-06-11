@@ -1,0 +1,109 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{moreverb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{fancybox}
+\usepackage{float}
+\usepackage{fancyvrb}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage{multirow}
+
+
+\usepackage{anysize}
+\marginsize{1.5cm}{1.5cm}{1cm}{1cm}
+
+\renewcommand{\shorthandsspanish}{}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PORTADA %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{titlepage}
+\begin{center}
+
+%Espacio antes del logo del itba
+\Large \  \\[1.5cm]
+
+\includegraphics[scale=0.40]{Imagenes/logo_itba}\\[1cm]
+\textsc{\LARGE Sistemas de inteligencia artificial}\\[1.5cm]
+\textsc{\Large Trabajo práctico $\text{N}^{\circ}$4}\\[0.5cm]
+
+\HRule \\[0.4cm]
+{ \huge \bfseries Algoritmos Generitcos}\\[0.4cm]
+\HRule \\[1.5cm]
+
+\Large Autores: \\ [0.25cm]
+\begin{tabular}{l @{\ \ -\ \ }l}
+\Large Pablo Ballesty & \Large 49359\\[0.2cm]
+\Large Nicolás Magni & \Large 48008\\[0.2cm]
+\Large Guillermo Liss & \Large 49282 \\[0.2cm]
+\end{tabular}
+
+
+
+\vspace{1cm}
+
+\vfill
+% La fecha queda abajo.
+{\large \today}
+
+\end{center}
+\end{titlepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\abstract{
+
+El objetivo del presente informe es detallar las decisiones tomadas durante el diseño e implementación de un algoritmos genetico que obtenga la configuracion de pesos óptima
+ para una arquitectura fija de red neuronal. Se utilizaron los siguientes metods de \textbf{crossover}: cruce de un punto, cruce de dos puntos, anular y cruce uniforme parametrizado. 
+ Como operadores de mutación se utilizaron la mutacion uniforme, no uniforme y backpropagation.
+}
+
+\section{Desarrollo}
+En las siguientes secciones se detallan los aspectos que se consideraron destacables durante el desarrollo del trabajo.
+
+\subsection{Definición y diseño del individuo}
+El individuo lo definimos como un vector de reales , donde cada real representa el peso de cada artista de la red neuronal. Para construir el individuo se concatenaron los niveles de la red comenzando por el primer nivel (nivel de entrada) y continuando con los siguientes niveles hasta llegar al nivel de salida. Se tomo esta decision ya que todas la redes con las que se trabaja en cada ejecucion tienene la misma arquitectura.
+
+\subsection{Metodos de selección}
+Se implementaron los siguientes metodos de selección:
+\begin{itemize}
+	\item Elitismo.
+	\item Ruleta. 
+	\item Universal. 
+	\item Torneos.
+\end{itemize}
+Para el proceso de selección se tuvieron en cuenta tres conjuntos,la poblacion \textbf{P}, los padres que fueron selecionados para ser cruzados \textbf{F}, y el conjunto de los hijos \textbf{S}. Luego según el criterio definido por el metodo de seleccion se seleccionan $n$ individuos de \textbf{F} $\bigcup$ \textbf{S}  donde $n$ es $\#P$.
+
+\subsection{Funcion de fitness}
+
+La funcion de fitness seleccionada para el desarrollo de trabajo es:
+\begin{equation}
+	1 / Error
+\end{equation}
+Donde el \textbf{Error} es el error cuadratico de todos los puntos. La función se definio de esta forma para que crezca a medida que el \textbf{Error} disminuye.
+%\begin{equation}
+%	min \left\{ E_{test},E_{trainning} \right\}
+%\end{equation}
+%Donde, $E_{test}$ es el error de la red al evaluar la red con el conjunto de patrones de testeo, y $E_{trainning}$ es el error de la red al evaluar la red con el conjunto de patrones de entrenamiento.
+
+\subsection{Mutaciones}
+Ademas de las mutaciones convencionales como, mutacion uniforme, no uniforme y backpropagation. En esta ultima se ejecutan una cantidad $m_bp$ pasos de feed forward sobre todas las redes.
+\subsection{Condiciones de corte}
+
+\subsection{Resultados}
+Para todas las ejecuciónes se tomo que la función de activación de la red neuronal es la \textbf{tanh}.
+
+\subsection{Concluisiones}
+
+\end{document}

@@ -39,7 +39,7 @@ main(int argc, char **argv)
 
 		BmpImage *images = NULL;
 
-		BmpImage aux = create_bmp_image("aux");
+		BmpImage aux = create_bmp_image(args_info->secret_arg);
 		int n = 0;
 		while((dp=readdir(dir)) != NULL && n < MAX_IMAGES) {
 			aux->filename = path_cat(dirpath, dp->d_name);
@@ -48,12 +48,12 @@ main(int argc, char **argv)
 					printf("Loaded: %s\n", aux->filename);
 				}
 				if(images == NULL) {
-					images = malloc(sizeof(BmpImage));
+					images = malloc(sizeof(struct bmp_image));
 				}else{
-					images = realloc(images, (n + 1) * sizeof(BmpImage));
+					images = realloc(images, (n + 1) * sizeof(struct bmp_image));
 				}
 				images[n++] = aux;
-				aux = create_bmp_image("aux");
+				aux = create_bmp_image(args_info->secret_arg);
 			}
 		}
 
@@ -97,7 +97,7 @@ main(int argc, char **argv)
 
 		BmpImage *images = NULL;
 
-		BmpImage aux = create_bmp_image("aux");
+		BmpImage aux = create_bmp_image(args_info->secret_arg);
 		int ncounter = 0;
 		while((dp=readdir(dir)) != NULL && ncounter != n && ncounter < MAX_IMAGES) {
 			aux->filename = path_cat(dirpath, dp->d_name);
@@ -106,12 +106,12 @@ main(int argc, char **argv)
 					printf("Loaded: %s\n", aux->filename);
 				}
 				if(images == NULL) {
-					images = malloc(sizeof(BmpImage));
+					images = malloc(sizeof(struct bmp_image));
 				}else{
-					images = realloc(images, (ncounter + 1) * sizeof(BmpImage));
+					images = realloc(images, (ncounter + 1) * sizeof(struct bmp_image));
 				}
 				images[ncounter++] = aux;
-				aux = create_bmp_image("aux");
+				aux = create_bmp_image(args_info->secret_arg);
 			}
 		}
 

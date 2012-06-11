@@ -311,10 +311,10 @@ calculateHashBit(BmpImage im, int bl, int k) {
 	for(i = 0; i < MD5_DIGEST_LENGTH; i++) {
 		for(j = 0; j < 8; j++) {
 			if(i == 0 && j == 0) {
-				p = hash[0] & 1;
+				p = hash[0] & 0x01;
 			}else{
 				pos = pow(2, j);
-				p = p ^ ((pos & hash[i]) >> j);
+				p = (p ^ ((pos & hash[i]) >> j));
 			}
 		}
 	}
