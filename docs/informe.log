@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.4)  11 JUN 2012 03:53
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.5.4)  11 JUN 2012 04:02
 entering extended mode
  %&-line parsing enabled.
 **informe.tex
@@ -584,7 +584,7 @@ LaTeX Info: Redefining \pageref on input line 25.
 \openout6 = `informe.out'.
 
 \AtBeginShipoutBox=\box34
- <Imagenes/logo_itba.png, id=11, 534.99875pt x 189.70876pt>
+ <Imagenes/logo_itba.png, id=19, 534.99875pt x 189.70876pt>
 File: Imagenes/logo_itba.png Graphic file (type png)
 
 <use Imagenes/logo_itba.png>
@@ -614,14 +614,14 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.91 \end{document}
+l.95 \end{document}
                     [1] (./informe.aux) ) 
 Here is how much of TeX's memory you used:
- 6516 strings out of 495061
- 89551 string characters out of 1182622
- 166067 words of memory out of 3000000
- 9562 multiletter control sequences out of 15000+50000
- 13413 words of font info for 51 fonts, out of 3000000 for 9000
+ 6521 strings out of 495061
+ 89626 string characters out of 1182622
+ 167067 words of memory out of 3000000
+ 9565 multiletter control sequences out of 15000+50000
+ 13720 words of font info for 52 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  38i,7n,36p,273b,324s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texmf-texlive/fonts/type1/
@@ -634,9 +634,9 @@ exmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-texlive
 /public/amsfonts/cm/cmr9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfo
 nts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy
 9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on informe.pdf (2 pages, 177690 bytes).
+Output written on informe.pdf (2 pages, 178901 bytes).
 PDF statistics:
- 68 PDF objects out of 1000 (max. 8388607)
- 4 named destinations out of 1000 (max. 500000)
- 22 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 76 PDF objects out of 1000 (max. 8388607)
+ 6 named destinations out of 1000 (max. 500000)
+ 38 words of extra memory for PDF output out of 10000 (max. 10000000)
 

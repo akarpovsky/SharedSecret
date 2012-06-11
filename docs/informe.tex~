@@ -77,7 +77,7 @@ de secreto compartido, consisten en ocultar información sensible, la cual llama
 recuperación del secreto, serán necesarias $k$ (con $k \le n$).\\
 
 Como en este caso, las claves son imágenes, al momento de generar las mismas, se utiliza una técnica de \emph{esteganografía} con el fin
-de guardar las mismas sin que el ojo humano note, que se trata de claves.\\
+de que el ojo humano no note, que se trata de claves.\\
 
 El algoritmo que se utiliza en el trabajo se extrajo de la publicación \textbf{\emph{``Improvements in Geometry-Based Secret Image Sharing Approach
 with Steganography``}} realizada por \textbf{Mustafá Ulutas}, \textbf{Vasif V. Nabiyev} y \textbf{Guzin Ulutas}, de la Universidad de Karadeniz, Turquía.
@@ -85,7 +85,12 @@ with Steganography``}} realizada por \textbf{Mustafá Ulutas}, \textbf{Vasif V. 
 \section{Desarrollo}
 
 La implementación del algoritmo no resulta difícil de implementar, sin embargo, precisa de cuidado en ciertos aspectos, para obtener resultados
-exitosos. 
+exitosos. A continuación, se detallan las dificultades que presenta el algoritmo, y como fueron resultas en la práctica.
 
+\subsection{Sistemas compatibles determinados}
+
+
+
+\subsection{Validación de la distribución}
 
 \end{document}
